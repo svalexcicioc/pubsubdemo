@@ -11,7 +11,7 @@ const run = async () => {
   console.log('Consumer 2 initialized');
   // Consuming
   await consumer.connect()
-  await consumer.subscribe({ topic: 'test-topic', fromBeginning: true })
+  await consumer.subscribe({ topic: 'test', fromBeginning: true })
 
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
